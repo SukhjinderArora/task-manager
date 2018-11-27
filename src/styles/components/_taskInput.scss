@@ -1,0 +1,14 @@
+.task-input {
+  width: 30rem;
+  padding: 0.5rem;
+  border: 1px solid rgba($color-primary, 0.4);
+
+
+  &:focus {
+    outline: 1px solid rgba($color-primary, 0.4);
+  }
+
+  &::placeholder {
+    color: rgba($color-black, 0.8);
+  }
+}

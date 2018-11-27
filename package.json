@@ -1,7 +1,7 @@
 {
-  "name": "javascript-boilerplate",
+  "name": "task-manager",
   "version": "1.0.0",
-  "description": "A simple Boilerplate for small JavaScript applications",
+  "description": "A task management application",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",

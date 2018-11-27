@@ -7,7 +7,54 @@
   <title>JavaScript Boilerplate</title>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <img src="assets/logo-og.png" alt="">
+
+  <header class="heading">
+    <h1 class="heading__primary">Task Manager</h1>
+    <p class="heading__secondary">Get your tasks done.</p>
+  </header>
+
+  <section class="section-input">
+    <div class="u-center-text u-margin-top-medium">
+      <input type="text" class="task-input" required placeholder="Enter Task">
+      <button class="btn btn--primary">Add Task</button>
+    </div>
+  </section>
+
+  <section class="section-task-list">
+    <div class="task">
+      <p class="task__description">
+        Go to Gym at 6 A.M.
+      </p>
+      <div class="icon-box">
+        <button class="btn-icon">
+          <img src="assets/arrows_square_check.svg" alt="task complete" class="icon icon--check">
+        </button>
+        <button class="btn-icon">
+          <img src="assets/arrows_square_remove.svg" alt="task remove" class="icon icon--remove">
+        </button>
+      </div>
+      <div>
+
+      </div>
+    </div>
+    
+    <div class="task">
+      <p class="task__description">
+        Go to Gym at 6 A.M.
+      </p>
+      <div class="icon-box">
+        <button class="btn-icon">
+          <img src="assets/arrows_square_check.svg" alt="task complete" class="icon icon--check">
+        </button>
+        <button class="btn-icon">
+          <img src="assets/arrows_square_remove.svg" alt="task remove" class="icon icon--remove">
+        </button>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>

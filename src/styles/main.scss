@@ -1,6 +1,15 @@
-@import 'header';
+@import 'abstracts/variables';
 
-body {
-  text-align: center;
-  // background-image: url('../assets/logo-og.png');
-}
+@import 'base/reboot';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'layout/header';
+
+@import 'components/taskInput';
+@import 'components/button';
+@import 'components/task';
+@import 'components/icon';
+
+@import 'pages/home';

@@ -1,0 +1,31 @@
+.btn {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: .5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all .2s;
+
+  &--primary {
+    background-color: rgba($color-primary, .8);
+    color: rgba($color-white, .8);
+  }
+
+  &:hover {
+    background-color: rgba($color-white, .8);
+    color: rgba($color-primary, .8);
+    border: 1px solid rgba($color-primary, .8);
+  }
+
+  &-icon {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+.heading {
+  text-align: center;
+  padding: 1rem 0;
+  
+  &__primary {
+    font-size: 5rem;
+    letter-spacing: 1px;
+  }
+
+  &__secondary {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+}
+
+.task {
+  font-size: 1.8rem;
+}
