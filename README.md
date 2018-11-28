@@ -1,4 +1,4 @@
-# Simple Boilerplate for JavaScript Applications
+# Simple Task Management Application
 
 ## How to Use?
 
