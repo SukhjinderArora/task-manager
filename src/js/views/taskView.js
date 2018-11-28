@@ -5,6 +5,10 @@ import imgRemove from '../../assets/arrows_square_remove.svg';
 
 export const getInput = () => elements.taskInput.value;
 
+export const clearInput = () => {
+  elements.taskInput.value = '';
+};
+
 export const renderTask = (task) => {
   const markup = `
     <div class="task" id ="task-${task.taskID}">
@@ -30,4 +34,9 @@ export const renderTask = (task) => {
 export const deleteTaskUI = (taskID) => {
   const task = document.getElementById(taskID);
   task.parentNode.removeChild(task);
+};
+
+export const markTaskDoneUI = (taskID) => {
+  const taskDesc = document.getElementById(taskID).firstElementChild;
+  taskDesc.classList.add('task__done');
 };

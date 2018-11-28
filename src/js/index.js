@@ -5,7 +5,9 @@ import * as taskView from './views/taskView';
 import * as taskModel from './models/taskModel';
 
 // Task Controller
+const getTaskID = event => event.target.parentNode.parentNode.parentNode.id;
 
+// Add a task
 const addTask = () => {
   // Get input from input field
   const taskDesc = taskView.getInput();
@@ -16,11 +18,15 @@ const addTask = () => {
 
   // update UI
   taskView.renderTask(task);
+
+  // clear input
+  taskView.clearInput();
 };
 
+// Delete a task
 const deleteTask = (event) => {
   // get task id
-  const taskID = event.target.parentNode.parentNode.parentNode.id;
+  const taskID = getTaskID(event);
   if (taskID) {
     const ID = parseInt(taskID.split('-')[1], 10);
     // delete task from model
@@ -32,6 +38,20 @@ const deleteTask = (event) => {
   }
 };
 
+// Mark task as done
+const markTaskDone = (event) => {
+  const taskID = getTaskID(event);
+
+  if (taskID) {
+    const ID = parseInt(taskID.split('-')[1], 10);
+    // set the status true in model
+    taskModel.markTaskasDone(ID);
+
+    // Update the UI
+    taskView.markTaskDoneUI(taskID);
+  }
+};
+
 elements.submitBtn.addEventListener('click', addTask);
 elements.taskInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
@@ -39,4 +59,10 @@ elements.taskInput.addEventListener('keydown', (event) => {
   }
 });
 
-elements.taskList.addEventListener('click', deleteTask);
+elements.taskList.addEventListener('click', (event) => {
+  if (event.target.className === 'icon icon--remove') {
+    deleteTask(event);
+  } else if (event.target.className === 'icon icon--check') {
+    markTaskDone(event);
+  }
+});

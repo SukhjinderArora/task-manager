@@ -8,4 +8,8 @@
   &__description {
     flex-basis: 80%;
   }
+
+  &__done {
+    text-decoration: line-through;
+  }
 }

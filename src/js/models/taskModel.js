@@ -19,6 +19,13 @@ export const saveTask = (taskDesc) => {
 export const deleteTask = (taskID) => {
   const len = data.length;
   data = data.filter(task => task.taskID !== taskID);
-  console.log(data);
   return data.length !== len;
+};
+
+export const markTaskasDone = (taskID) => {
+  data.forEach((task) => {
+    if (task.taskID === taskID) {
+      task.status = true;
+    }
+  });
 };
