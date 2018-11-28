@@ -52,17 +52,33 @@ const markTaskDone = (event) => {
   }
 };
 
-elements.submitBtn.addEventListener('click', addTask);
-elements.taskInput.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-    addTask();
-  }
-});
+const setupEventListeners = () => {
+  elements.submitBtn.addEventListener('click', addTask);
+  elements.taskInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      addTask();
+    }
+  });
 
-elements.taskList.addEventListener('click', (event) => {
-  if (event.target.className === 'icon icon--remove') {
-    deleteTask(event);
-  } else if (event.target.className === 'icon icon--check') {
-    markTaskDone(event);
+  elements.taskList.addEventListener('click', (event) => {
+    if (event.target.className === 'icon icon--remove') {
+      deleteTask(event);
+    } else if (event.target.className === 'icon icon--check') {
+      markTaskDone(event);
+    }
+  });
+};
+
+const init = () => {
+  setupEventListeners();
+  if (localStorage.getItem('taskList')) {
+    // get the data from local storage
+    const data = JSON.parse(localStorage.getItem('taskList'));
+    // updates model
+    taskModel.updateModelData(data);
+    // render UI
+    taskView.renderTaskList(data);
   }
-});
+};
+
+init();

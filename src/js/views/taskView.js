@@ -40,3 +40,12 @@ export const markTaskDoneUI = (taskID) => {
   const taskDesc = document.getElementById(taskID).firstElementChild;
   taskDesc.classList.add('task__done');
 };
+
+export const renderTaskList = (data) => {
+  data.forEach((task) => {
+    renderTask(task);
+    if (task.status) {
+      markTaskDoneUI(`task-${task.taskID}`);
+    }
+  });
+};
