@@ -33,10 +33,9 @@ export const deleteTask = (taskID) => {
 };
 
 export const markTaskasDone = (taskID) => {
-  data.forEach((task) => {
-    if (task.taskID === taskID) {
-      task.status = true;
-    }
-  });
+  const taskIndex = data.findIndex(task => task.taskID === taskID);
+  const task = { ...data[taskIndex] };
+  task.status = !task.status;
+  data[taskIndex] = task;
   saveToLocalStorage();
 };

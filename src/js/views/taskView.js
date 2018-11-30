@@ -38,7 +38,7 @@ export const deleteTaskUI = (taskID) => {
 
 export const markTaskDoneUI = (taskID) => {
   const taskDesc = document.getElementById(taskID).firstElementChild;
-  taskDesc.classList.add('task__done');
+  taskDesc.classList.toggle('task__done');
 };
 
 export const renderTaskList = (data) => {
