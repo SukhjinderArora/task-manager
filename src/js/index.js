@@ -5,7 +5,14 @@ import * as taskView from './views/taskView';
 import * as taskModel from './models/taskModel';
 
 // Task Controller
-const getTaskID = event => event.target.parentNode.parentNode.parentNode.id;
+const getTaskID = (event) => {
+  let id = event.target.parentNode.parentNode.parentNode.id;
+  if(!id) {
+    id = event.target.parentNode.parentNode.id;
+    return id;
+  }
+  return id;
+};
 
 // Add a task
 const addTask = () => {
@@ -61,9 +68,9 @@ const setupEventListeners = () => {
   });
 
   elements.taskList.addEventListener('click', (event) => {
-    if (event.target.className === 'icon icon--remove') {
+    if (event.target.classList.contains('icon--remove') || event.target.classList.contains('btn-icon--remove')) {
       deleteTask(event);
-    } else if (event.target.className === 'icon icon--check') {
+    } else if (event.target.classList.contains('icon--check') || event.target.classList.contains('btn-icon--done')) {
       markTaskDone(event);
     }
   });
