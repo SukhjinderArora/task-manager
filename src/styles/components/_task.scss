@@ -8,6 +8,9 @@
   &__description {
     flex-basis: 80%;
     padding: 0 .5rem;
+    @include respond(phone) {
+      flex-basis: 70%;
+    }
   }
 
   &__done {

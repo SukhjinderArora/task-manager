@@ -24,6 +24,13 @@
     margin: 0;
     padding: 0;
 
+    &--done {
+      margin-right: .5rem;
+      @include respond(phone) {
+        margin-right: 1.5rem;
+      }
+    }
+
     &:hover {
       opacity: 0.7;
     }
