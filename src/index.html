@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Task Manager</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <main>
+      <header class="heading">
+        <h1 class="heading__primary">Task Manager</h1>
+        <p class="heading__secondary">Get your tasks done.</p>
+      </header>
 
-  <header class="heading">
-    <h1 class="heading__primary">Task Manager</h1>
-    <p class="heading__secondary">Get your tasks done.</p>
-  </header>
+      <section class="section-input">
+        <div class="u-center-text u-margin-top-medium">
+          <input
+            type="text"
+            class="task-input js-task-input"
+            required
+            placeholder="Enter Task"
+          />
+          <button class="btn btn--primary js-btn">Add Task</button>
+        </div>
+      </section>
 
-  <section class="section-input">
-    <div class="u-center-text u-margin-top-medium">
-      <input type="text" class="task-input js-task-input" required placeholder="Enter Task">
-      <button class="btn btn--primary js-btn">Add Task</button>
-    </div>
-  </section>
+      <section class="section-task-list">
+        <!--
+          <div class="task">
+            <p class="task__description">
+              Go to Gym at 6 A.M.
+            </p>
+            <div class="icon-box">
+              <button class="btn-icon">
+                <img src="assets/arrows_square_check.svg" alt="task complete" class="icon icon--check">
+              </button>
+              <button class="btn-icon">
+                <img src="assets/arrows_square_remove.svg" alt="task remove" class="icon icon--remove">
+              </button>
+            </div>
+            <div>
 
-  <section class="section-task-list">
-    <!-- <div class="task">
-      <p class="task__description">
-        Go to Gym at 6 A.M.
+            </div>
+          </div>
+
+          <div class="task">
+            <p class="task__description">
+              Go to Gym at 6 A.M.
+            </p>
+            <div class="icon-box">
+              <button class="btn-icon">
+                <img src="assets/arrows_square_check.svg" alt="task complete" class="icon icon--check">
+              </button>
+              <button class="btn-icon">
+                <img src="assets/arrows_square_remove.svg" alt="task remove" class="icon icon--remove">
+              </button>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        -->
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__description">
+        Designed and Developed By
+        <a href="https://sukhjinderarora.com" target="_blank"
+          >Sukhjinder Arora</a
+        >
       </p>
-      <div class="icon-box">
-        <button class="btn-icon">
-          <img src="assets/arrows_square_check.svg" alt="task complete" class="icon icon--check">
-        </button>
-        <button class="btn-icon">
-          <img src="assets/arrows_square_remove.svg" alt="task remove" class="icon icon--remove">
-        </button>
-      </div>
-      <div>
-
-      </div>
-    </div>
-    
-    <div class="task">
-      <p class="task__description">
-        Go to Gym at 6 A.M.
-      </p>
-      <div class="icon-box">
-        <button class="btn-icon">
-          <img src="assets/arrows_square_check.svg" alt="task complete" class="icon icon--check">
-        </button>
-        <button class="btn-icon">
-          <img src="assets/arrows_square_remove.svg" alt="task remove" class="icon icon--remove">
-        </button>
-      </div>
-      <div>
-
-      </div>
-    </div> -->
-  </section>
-
-</body>
+    </footer>
+  </body>
 </html>
