@@ -7,7 +7,7 @@ import * as taskModel from './models/taskModel';
 // Task Controller
 const getTaskID = (event) => {
   let id = event.target.parentNode.parentNode.parentNode.id;
-  if(!id) {
+  if (!id) {
     id = event.target.parentNode.parentNode.id;
     return id;
   }
