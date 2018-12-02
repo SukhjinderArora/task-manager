@@ -55,6 +55,7 @@ module.exports = {
       },
     ],
   },
+  devtool: devMode ? 'eval-source-map' : '(none)',
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'style.css',
