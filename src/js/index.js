@@ -1,3 +1,5 @@
+import '@babel/polyfill';
+
 import '../styles/main.scss';
 
 import elements from './views/base';
