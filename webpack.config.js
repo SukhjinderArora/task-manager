@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -57,6 +58,7 @@ module.exports = {
   },
   devtool: devMode ? 'eval-source-map' : '(none)',
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
