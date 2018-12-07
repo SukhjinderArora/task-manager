@@ -4,6 +4,8 @@ const saveToLocalStorage = () => {
   localStorage.setItem('taskList', JSON.stringify(data));
 };
 
+export const getTasksFromLocalStorage = () => JSON.parse(localStorage.getItem('taskList'));
+
 export const updateModelData = (newData) => {
   data = newData;
 };

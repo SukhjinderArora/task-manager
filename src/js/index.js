@@ -82,11 +82,11 @@ const init = () => {
   setupEventListeners();
   if (localStorage.getItem('taskList')) {
     // get the data from local storage
-    const data = JSON.parse(localStorage.getItem('taskList'));
+    const tasks = taskModel.getTasksFromLocalStorage();
     // updates model
-    taskModel.updateModelData(data);
+    taskModel.updateModelData(tasks);
     // render UI
-    taskView.renderTaskList(data);
+    taskView.renderTaskList(tasks);
   }
 };
 

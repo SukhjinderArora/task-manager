@@ -23,9 +23,6 @@ export const renderTask = (task) => {
           <img src="${imgRemove}" alt="task remove" class="icon icon--remove">
         </button>
       </div>
-      <div>
-
-      </div>
     </div>  
   `;
   elements.taskList.insertAdjacentHTML('beforeend', markup);
