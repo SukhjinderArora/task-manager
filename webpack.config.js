@@ -56,7 +56,7 @@ module.exports = {
       },
     ],
   },
-  devtool: devMode ? 'eval-source-map' : '(none)',
+  devtool: devMode ? 'eval-source-map' : '',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({

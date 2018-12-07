@@ -8,8 +8,8 @@
     "dev": "webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "start": "webpack-dev-server --mode development --open --hot",
-    "deploy": "gh-pages -d dist",
-    "build-and-deploy": "npm-run-all build deploy"
+    "pre-deploy": "gh-pages -d dist",
+    "deploy": "npm-run-all build pre-deploy"
   },
   "keywords": [],
   "author": "Sukhjinder Arora",
